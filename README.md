@@ -1,5 +1,3 @@
-Here is your clean, professional `README.md` file ready to drop straight into your GitHub repository!
-
 ---
 
 ```markdown
@@ -80,6 +78,3 @@ This project is open-source and available under the [MIT License](https://www.go
 
 ---
 
-Copy this into a `README.md` file in VS Code, commit, push, and Project #5 is officially complete! 🚀
-
-```
