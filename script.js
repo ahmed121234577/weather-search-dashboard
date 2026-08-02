@@ -39,3 +39,37 @@ async function fetchWeatherData(cityName) {
 fetchWeatherData("Cairo")
     .then(data => console.log("Success:", data))
     .catch(err => console.error("Error:", err.message));
+
+const  weatherbox = document.getElementById("weather");
+const loadingbox = document.getElementById("loading");
+const errorbox = document.getElementById("error");
+const errorMessage = document.getElementById("error-message");
+
+function hideAllStates() {
+    weatherbox.style.display = "none";
+    loadingbox.style.display = "none";
+    errorbox.style.display = "none";
+}
+
+function showLoading() {
+    hideAllStates();
+    loadingbox.style.display = "block";
+}
+
+function showWeather(data) {
+    hideAllStates();
+    document.getElementById("city-name").textContent = data.cityName;
+    document.getElementById("temperature").textContent = `${data.temperature} °C`;
+    document.getElementById("wind-speed").textContent = `${data.windSpeed} m/s`;
+    document.getElementById("weather-code").textContent = `Weather Code: ${data.weatherCode}`;
+    weatherbox.style.display = "block";
+}
+
+function showError(message) {
+    hideAllStates();
+    errorMessage.textContent = message;
+    errorbox.style.display = "block";
+}
+
+hideAllStates();
+

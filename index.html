@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Weather & Search Dashboard!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-time Weather & Search Dashboard!</h1>
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="searchBtn">Search</button>
+        <div id="weatherResult">
+            <div class="weather-info" id="weather">
+                <h2 id="cityName"></h2>
+                <p id="temperature"></p>
+                <p id="windSpeed"></p>
+            </div>
+            <div class="loading-state" id="loading">
+                <p>Loading...</p>
+            </div>
+            <div class="error-state" id="error">
+                <p id="errorMessage"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
