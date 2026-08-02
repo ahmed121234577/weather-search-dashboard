@@ -3,28 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-time Weather & Search Dashboard!</title>
+    <title>Real-time Weather & Search Dashboard</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌤️</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Real-time Weather & Search Dashboard!</h1>
-        <input type="text" id="cityInput" placeholder="Enter city name">
-        <button id="searchBtn">Search</button>
+        <h1>Weather Dashboard</h1>
+        
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name...">
+            <button id="searchBtn">Search</button>
+        </div>
+
         <div id="weatherResult">
             <div class="weather-info" id="weather">
+                <span class="weather-icon" id="weatherIcon">☀️</span>
                 <h2 id="cityName"></h2>
-                <p id="temperature"></p>
-                <p id="windSpeed"></p>
+                <div class="temp-display" id="temperature">--°C</div>
+                
+                <div class="details-grid">
+                    <div class="detail-item">
+                        Wind Speed
+                        <span id="windSpeed">-- km/h</span>
+                    </div>
+                    <div class="detail-item">
+                        Condition
+                        <span id="conditionLabel">--</span>
+                    </div>
+                </div>
             </div>
+
             <div class="loading-state" id="loading">
-                <p>Loading...</p>
+                <p>⚡ Fetching live weather...</p>
             </div>
-            <div class="error-state" id="error">
+
+            <div class="error-state" id="errorState">
                 <p id="errorMessage"></p>
             </div>
         </div>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
