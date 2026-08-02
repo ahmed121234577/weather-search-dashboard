@@ -1,6 +1,4 @@
----
 
-```markdown
 # 🌤️ Real-time Weather & Search Dashboard
 
 A modern, responsive weather dashboard built with **Vanilla JavaScript (ES6+)**, CSS Glassmorphism, and the **Open-Meteo REST API**. 
